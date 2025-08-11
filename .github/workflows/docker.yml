@@ -34,7 +34,7 @@ jobs:
           fi
 
           echo "Using $RELEASE_NAME as release name."
-          echo "::set-output name=name::$RELEASE_NAME"
+          echo "name=$RELEASE_NAME" >> $GITHUB_OUTPUT
       # setup docker
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v2
